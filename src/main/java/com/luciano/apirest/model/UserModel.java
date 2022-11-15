@@ -4,12 +4,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity(name = "usuario")
+@Entity(name = "name")
 public class UserModel {
     @Id
     public Integer code;
     @Column(nullable = false, length = 60)
-    public String user;
+    public String name;
     @Column(nullable = false, length = 10)
     public String login;
     @Column(nullable = false, length = 10)
@@ -23,12 +23,12 @@ public class UserModel {
         this.code = code;
     }
 
-    public String getUser() {
-        return user;
+    public String getName() {
+        return name;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getLogin() {

@@ -1,12 +1,18 @@
 package com.luciano.apirest.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity(name = "usuario")
 public class UserModel {
+    @Id
     public Integer code;
+    @Column(nullable = false, length = 60)
     public String user;
+    @Column(nullable = false, length = 10)
     public String login;
+    @Column(nullable = false, length = 10)
     public String password;
 
     public Integer getCode() {
